@@ -1,1 +1,1 @@
-export { ReProvider } from "./I18Provider";
+export { ReI18nProvider } from "./i18n.provider";
