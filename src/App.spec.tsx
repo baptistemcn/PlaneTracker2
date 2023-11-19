@@ -1,5 +1,6 @@
 import { render } from "@testing-library/react-native";
 import { PlaneTracker } from "./App";
+import { ReThemeProvider } from "./theme/Theme.provider";
 
 jest.mock("react-i18next", () => ({
   useTranslation: () => ({
@@ -12,11 +13,19 @@ jest.mock("react-i18next", () => ({
 
 describe("PlaneTracker", () => {
   it("should render", () => {
-    render(<PlaneTracker />);
+    render(
+      <ReThemeProvider>
+        <PlaneTracker />
+      </ReThemeProvider>,
+    );
   });
 
   it("should render a text", () => {
-    const { getByText } = render(<PlaneTracker />);
+    const { getByText } = render(
+      <ReThemeProvider>
+        <PlaneTracker />
+      </ReThemeProvider>,
+    );
 
     const textElement = getByText(
       "Open up App.tsx to start working on your app!",
