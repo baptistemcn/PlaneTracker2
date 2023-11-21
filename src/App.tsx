@@ -1,28 +1,25 @@
-import { useTheme } from "@rneui/themed";
-import { StatusBar } from "expo-status-bar";
+import { Text, View } from "react-native";
 import { useTranslation } from "react-i18next";
-import { StyleSheet, Text, View } from "react-native";
+import { StatusBar } from "expo-status-bar";
+
+import { styled } from "nativewind";
+
+const StyledView = styled(View);
+const StyledText = styled(Text);
 
 export const PlaneTracker = () => {
   const { t } = useTranslation();
-  const { theme } = useTheme();
 
   return (
-    <View style={styles.container}>
-      <Text style={{ color: theme.colors.error }}>
-        Open up App.tsx to start working on your app!
-      </Text>
-      <Text>{t("name")}</Text>
+    <StyledView className={styles.container}>
+      <StyledText>Open up App.tsx to start working on your app!</StyledText>
+      <StyledText className={styles.text}>{t("name")}</StyledText>
       <StatusBar style="auto" />
-    </View>
+    </StyledView>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
+const styles = {
+  container: "flex-1 items-center justify-center bg-white",
+  text: "line-through",
+};
