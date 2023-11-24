@@ -10,6 +10,7 @@ module.exports = function (api) {
         {
           alias: {
             "@i18n": "./src/i18n",
+            "@ui": "./src/ui",
           },
           extensions: [".ts", ".tsx"],
         },
