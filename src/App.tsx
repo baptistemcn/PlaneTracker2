@@ -1,9 +1,25 @@
-import { Box, ReText } from "@ui";
+import { AuthenticationNavigator } from "@authentication";
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import { AppRoutes } from "@routes";
+
+const AppStack = createStackNavigator<AppRoutes>();
 
 export const PlaneTracker = () => {
   return (
-    <Box>
-      <ReText>Open up App.tsx to start working on your app!</ReText>
-    </Box>
+    <NavigationContainer>
+      <AppStack.Navigator
+        screenOptions={{
+          headerTitle: undefined,
+          headerShadowVisible: false,
+        }}
+      >
+        <AppStack.Screen
+          name="Authentication"
+          component={AuthenticationNavigator}
+          options={{ title: "", headerShown: false }}
+        />
+      </AppStack.Navigator>
+    </NavigationContainer>
   );
 };

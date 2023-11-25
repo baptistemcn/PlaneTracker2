@@ -9,6 +9,7 @@ module.exports = function (api) {
         "module-resolver",
         {
           alias: {
+            "@authentication": "./src/authentication",
             "@i18n": "./src/i18n",
             "@ui": "./src/ui",
           },
