@@ -1,13 +1,13 @@
 import { styled } from "nativewind";
 import { ReactNode } from "react";
-import { StyleProp, Text, TextProps } from "react-native";
+import { StyleProp, Text, TextStyle } from "react-native";
 
 const StyledText = styled(Text);
 
 interface ReTextProps {
   children: ReactNode;
   nativewind?: string;
-  styles?: StyleProp<TextProps>;
+  styles?: StyleProp<TextStyle>;
   testID?: string;
 }
 
