@@ -1,8 +1,10 @@
-import { render } from "@testing-library/react-native";
+import { render, waitFor } from "@testing-library/react-native";
 import { Entry } from "./index";
 
 describe("Entry component", () => {
-  it("should render", () => {
-    render(<Entry />);
+  it("should render", async () => {
+    await waitFor(() => {
+      render(<Entry />);
+    });
   });
 });
