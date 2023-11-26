@@ -10,7 +10,9 @@ module.exports = function (api) {
         {
           alias: {
             "@authentication": "./src/authentication",
+            "@components": "./src/components",
             "@i18n": "./src/i18n",
+            "@theme": "./src/theme",
             "@ui": "./src/ui",
           },
           extensions: [".ts", ".tsx"],
