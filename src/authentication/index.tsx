@@ -1,6 +1,8 @@
 import { createStackNavigator } from "@react-navigation/stack";
+
 import { AuthRoutes } from "@routes";
-import { Box, ReText } from "@ui";
+
+import { Onboarding } from "./Onboarding";
 
 const AuthenticationStack = createStackNavigator<AuthRoutes>();
 
@@ -17,9 +19,3 @@ export const AuthenticationNavigator = () => {
     </AuthenticationStack.Navigator>
   );
 };
-
-const Onboarding = () => (
-  <Box>
-    <ReText>Open up App.tsx to start working on your app!</ReText>
-  </Box>
-);
