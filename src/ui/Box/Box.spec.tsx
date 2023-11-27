@@ -22,6 +22,7 @@ describe("Box component", () => {
       flex: 1,
       alignItems: "center",
       justifyContent: "center",
+      flexDirection: "column",
       backgroundColor: "#fff",
     });
   });
@@ -39,6 +40,7 @@ describe("Box component", () => {
       flex: 1,
       alignItems: "center",
       justifyContent: "center",
+      flexDirection: "column",
       backgroundColor: "#fff",
     });
   });

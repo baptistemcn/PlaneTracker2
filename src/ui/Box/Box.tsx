@@ -1,27 +1,26 @@
-import { ReactNode } from "react";
-import { StyleProp, View, ViewStyle } from "react-native";
+import { View } from "react-native";
 import { styled } from "nativewind";
-
-interface BoxProps {
-  children: ReactNode;
-  nativewind?: string;
-  styles?: StyleProp<ViewStyle>;
-  testID?: string;
-}
+import { ReBoxProps } from "@types";
 
 const StyledView = styled(View);
 
 export const Box = ({
+  alignItems = "center",
+  backgroundColor = "#fff",
   children,
+  flex = 1,
+  flexDirection = "column",
+  justifyContent = "center",
   nativewind,
   styles = {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
+    flex: flex,
+    flexDirection: flexDirection,
+    backgroundColor: backgroundColor,
+    alignItems: alignItems,
+    justifyContent: justifyContent,
   },
   testID = "box",
-}: BoxProps) => {
+}: ReBoxProps) => {
   return (
     <StyledView className={nativewind} style={styles} {...{ testID }}>
       {children}
