@@ -11,7 +11,11 @@ interface ReThemeProviderProps {
 const theme = createTheme({
   darkColors: {},
   lightColors: {
-    error: palette.primary.red,
+    background: palette.primary.background,
+    primary: palette.primary.primary,
+    secondary: palette.primary.secondary,
+    divider: palette.primary.plateform,
+    error: palette.primary.error,
   },
 });
 
