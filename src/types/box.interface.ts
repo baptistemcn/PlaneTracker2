@@ -1,5 +1,10 @@
 import { ReactNode } from "react";
-import { FlexAlignType, StyleProp, ViewStyle } from "react-native";
+import {
+  DimensionValue,
+  FlexAlignType,
+  StyleProp,
+  ViewStyle,
+} from "react-native";
 
 export interface ReBoxProps {
   alignItems?: FlexAlignType;
@@ -8,7 +13,13 @@ export interface ReBoxProps {
   flex?: number;
   flexDirection?: FlexDirectionProps;
   justifyContent?: JustifyContentProps;
+  margin?: DimensionValue;
+  marginVertical?: DimensionValue;
+  marginHorizontale?: DimensionValue;
   nativewind?: string;
+  padding?: DimensionValue;
+  paddingVertical?: DimensionValue;
+  paddingHorizontal?: DimensionValue;
   styles?: StyleProp<ViewStyle>;
   testID?: string;
 }
