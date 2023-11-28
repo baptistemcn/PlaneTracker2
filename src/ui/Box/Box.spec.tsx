@@ -19,11 +19,28 @@ describe("Box component", () => {
     expect(boxElement.props.children).toEqual(mockBox.children);
 
     expect(boxElement.props.style[0][0]).toEqual({
-      flex: 1,
       alignItems: "center",
-      justifyContent: "center",
-      flexDirection: "column",
       backgroundColor: "#fff",
+      flex: undefined,
+      flexDirection: undefined,
+      height: undefined,
+      justifyContent: "center",
+      margin: undefined,
+      marginBottom: undefined,
+      marginLeft: undefined,
+      marginRight: undefined,
+      marginTop: undefined,
+      marginHorizontal: undefined,
+      marginVertical: undefined,
+      maxHeight: undefined,
+      padding: undefined,
+      paddingBottom: undefined,
+      paddingRight: undefined,
+      paddingLeft: undefined,
+      paddingTop: undefined,
+      paddingHorizontal: undefined,
+      paddingVertical: undefined,
+      width: undefined,
     });
   });
 
@@ -37,11 +54,28 @@ describe("Box component", () => {
     const { getByTestId } = render(<Box>{mockBox.children}</Box>);
 
     expect(getByTestId("box").props.style[0][0]).toEqual({
-      flex: 1,
       alignItems: "center",
-      justifyContent: "center",
-      flexDirection: "column",
       backgroundColor: "#fff",
+      flex: undefined,
+      flexDirection: undefined,
+      height: undefined,
+      justifyContent: "center",
+      margin: undefined,
+      marginBottom: undefined,
+      marginLeft: undefined,
+      marginRight: undefined,
+      marginTop: undefined,
+      marginHorizontal: undefined,
+      marginVertical: undefined,
+      maxHeight: undefined,
+      padding: undefined,
+      paddingBottom: undefined,
+      paddingRight: undefined,
+      paddingLeft: undefined,
+      paddingTop: undefined,
+      paddingHorizontal: undefined,
+      paddingVertical: undefined,
+      width: undefined,
     });
   });
 

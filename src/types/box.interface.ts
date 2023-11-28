@@ -12,15 +12,26 @@ export interface ReBoxProps {
   children: ReactNode;
   flex?: number;
   flexDirection?: FlexDirectionProps;
+  height?: DimensionValue;
   justifyContent?: JustifyContentProps;
   margin?: DimensionValue;
+  marginTop?: DimensionValue;
+  marginRight?: DimensionValue;
+  marginBottom?: DimensionValue;
+  marginLeft?: DimensionValue;
   marginVertical?: DimensionValue;
   marginHorizontale?: DimensionValue;
+  maxHeight?: DimensionValue;
   nativewind?: string;
   padding?: DimensionValue;
+  paddingTop?: DimensionValue;
+  paddingRight?: DimensionValue;
+  paddingBotton?: DimensionValue;
+  paddingLeft?: DimensionValue;
   paddingVertical?: DimensionValue;
   paddingHorizontal?: DimensionValue;
   styles?: StyleProp<ViewStyle>;
+  width?: DimensionValue;
   testID?: string;
 }
 
