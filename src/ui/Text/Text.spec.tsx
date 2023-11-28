@@ -19,9 +19,7 @@ describe("ReText component", () => {
   it("should render a text with default style", () => {
     const { getByTestId } = render(<ReText>{mockText.children}</ReText>);
 
-    const textElement = getByTestId("text");
-
-    expect(textElement.props.style[0][0]).toEqual({
+    expect(getByTestId("text").props.style[0][0]).toEqual({
       fontFamily: "Regular",
       fontSize: 16,
       letterSpacing: 1,
@@ -33,9 +31,7 @@ describe("ReText component", () => {
       <ReText styles={{ color: "#FF0000" }}>{mockText.children}</ReText>,
     );
 
-    const textElement = getByTestId("text");
-
-    expect(textElement.props.style[0][0]).toEqual({
+    expect(getByTestId("text").props.style[0][0]).toEqual({
       color: "#FF0000",
     });
   });
