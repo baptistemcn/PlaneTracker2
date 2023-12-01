@@ -18,13 +18,26 @@ export const ReButton = ({
   const { theme } = useTheme();
 
   const backgroundColor =
-    variant === "primary" ? theme.colors.primary : theme.colors.secondary;
-  const color =
-    variant === "primary" ? theme.colors.black : theme.colors.background;
+    variant === "primary" ? theme.colors.primary : theme.colors.background;
+  const borderColor =
+    variant === "primary" ? theme.colors.primary : theme.colors.primary;
+  const color = variant === "primary" ? theme.colors.black : theme.colors.black;
 
   return (
     <RectButton
-      style={[styles.container, style, { backgroundColor }]}
+      style={[
+        styles.container,
+        style,
+        {
+          backgroundColor,
+          borderColor,
+          borderWidth: 3,
+          shadowOffset: { height: 6, width: 6 },
+          shadowColor: theme.colors.grey0,
+          shadowOpacity: 0.2,
+          shadowRadius: 3,
+        },
+      ]}
       {...{ onPress, testID }}
     >
       <ReText styles={[styles.label, { color }]}>{label}</ReText>

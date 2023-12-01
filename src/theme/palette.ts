@@ -5,7 +5,7 @@ export const basic = {
 };
 
 export const primary = {
-  background: "#E8EDDF",
+  background: "#FFFFFF",
   primary: "#F5CB5C",
   secondary: "#20A39E",
   error: "#EF5B5B",

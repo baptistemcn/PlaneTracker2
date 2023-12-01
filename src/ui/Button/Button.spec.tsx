@@ -56,6 +56,12 @@ describe("Button component", () => {
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: "#F5CB5C",
+      borderColor: "#F5CB5C",
+      borderWidth: 3,
+      shadowOffset: { height: 6, width: 6 },
+      shadowColor: "#393e42",
+      shadowOpacity: 0.2,
+      shadowRadius: 3,
     });
   });
 
@@ -77,7 +83,13 @@ describe("Button component", () => {
       width: 245,
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: "#20A39E",
+      backgroundColor: "#FFFFFF",
+      borderColor: "#F5CB5C",
+      borderWidth: 3,
+      shadowOffset: { height: 6, width: 6 },
+      shadowColor: "#393e42",
+      shadowOpacity: 0.2,
+      shadowRadius: 3,
     });
   });
 
@@ -100,6 +112,12 @@ describe("Button component", () => {
       justifyContent: "center",
       alignItems: "center",
       backgroundColor: "#F5CB5C",
+      borderColor: "#F5CB5C",
+      borderWidth: 3,
+      shadowOffset: { height: 6, width: 6 },
+      shadowColor: "#393e42",
+      shadowOpacity: 0.2,
+      shadowRadius: 3,
     });
   });
 
@@ -165,7 +183,7 @@ describe("Button component", () => {
 
     expect(textElement.props.style[0][0]).toEqual([
       { fontFamily: "Regular", letterSpacing: 1.5 },
-      { color: "#E8EDDF" },
+      { color: "#242424" },
     ]);
   });
 });
