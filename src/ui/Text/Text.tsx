@@ -7,6 +7,7 @@ const StyledText = styled(Text);
 
 export const ReText = ({
   children,
+  color,
   fontFamily = "Regular",
   fontSize = 16,
   letterSpacing = 1,
@@ -15,6 +16,7 @@ export const ReText = ({
     fontFamily: fontFamily,
     fontSize: fontSize,
     letterSpacing: letterSpacing,
+    color: color,
   },
   testID = "text",
 }: ReTextProps) => (
