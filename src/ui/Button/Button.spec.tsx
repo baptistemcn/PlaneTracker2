@@ -164,7 +164,7 @@ describe("Button component", () => {
     expect(textElement).toBeOnTheScreen();
 
     expect(textElement.props.style[0][0]).toEqual([
-      { fontFamily: "Regular", letterSpacing: 1.5 },
+      { fontFamily: "SemiBold", letterSpacing: 1.5 },
       { color: "#242424" },
     ]);
   });
@@ -182,7 +182,7 @@ describe("Button component", () => {
     expect(textElement).toBeOnTheScreen();
 
     expect(textElement.props.style[0][0]).toEqual([
-      { fontFamily: "Regular", letterSpacing: 1.5 },
+      { fontFamily: "SemiBold", letterSpacing: 1.5 },
       { color: "#242424" },
     ]);
   });

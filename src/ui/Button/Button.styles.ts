@@ -9,7 +9,7 @@ export const useStyles = makeStyles(() => ({
     alignItems: "center",
   },
   label: {
-    fontFamily: "Regular",
+    fontFamily: "SemiBold",
     letterSpacing: 1.5,
   },
 }));
