@@ -1,20 +1,38 @@
-import { makeStyles } from "@rneui/themed";
-import { Box, ReText } from "@ui";
+import { useTheme } from "@rneui/themed";
+import { Box, ReButton, ReText } from "@ui";
+import { useTranslation } from "react-i18next";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
 
 export const Onboarding = () => {
-  const styles = useStyles();
+  const { theme } = useTheme();
+  const { t } = useTranslation();
+
+  const insets = useSafeAreaInsets();
   return (
-    <Box styles={styles.container}>
-      <ReText>Open up App.tsx to start working on your app!</ReText>
+    <Box
+      flex={1}
+      flexDirection={"column"}
+      paddingTop={insets.top}
+      width={"100%"}
+    >
+      <Box flex={1} flexDirection={"column"} maxHeight={"33%"}>
+        <ReText fontFamily="Bold" fontSize={32} letterSpacing={3}>
+          {t("name").toUpperCase()}
+        </ReText>
+      </Box>
+      <Box flex={1} flexDirection={"column"} maxHeight={"20%"}>
+        <ReText>{t("onboarding.message.welcome")}</ReText>
+      </Box>
+      <Box flex={1} flexDirection={"column"} maxHeight={"33%"}>
+        <Box margin={theme.spacing.md}>
+          <ReText color={theme.colors.grey2} fontFamily="Light">
+            {t("onboarding.message.start")}
+          </ReText>
+        </Box>
+        <Box margin={theme.spacing.md}>
+          <ReButton label={t("common.button.start").toUpperCase()} />
+        </Box>
+      </Box>
     </Box>
   );
 };
-
-const useStyles = makeStyles((theme) => ({
-  container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: theme.colors.primary,
-  },
-}));

@@ -19,20 +19,4 @@ describe("PlaneTracker", () => {
       </ReThemeProvider>,
     );
   });
-
-  it("should render a text", () => {
-    const { getByText } = render(
-      <ReThemeProvider>
-        <PlaneTracker />
-      </ReThemeProvider>,
-    );
-
-    const textElement = getByText(
-      "Open up App.tsx to start working on your app!",
-    );
-
-    expect(textElement.props.children).toEqual(
-      "Open up App.tsx to start working on your app!",
-    );
-  });
 });

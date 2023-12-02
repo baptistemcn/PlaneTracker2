@@ -1,5 +1,16 @@
 {
   "translation": {
-    "name": "PlaneTracker fr"
+    "name": "Plane Tracker",
+    "common": {
+      "button": {
+        "start": "Commencer"
+      }
+    },
+    "onboarding": {
+      "message": {
+        "welcome": "Bienvenue ! On est partis ? ✈️",
+        "start": "Cliquez pour commencer"
+      }
+    }
   }
 }
