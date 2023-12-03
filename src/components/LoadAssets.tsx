@@ -1,11 +1,6 @@
-import React, { ReactNode, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useFonts } from "expo-font";
-
-interface LoadAssetsProps {
-  children: ReactNode;
-}
-
-type Fonts = { [key: string]: string };
+import { Fonts, LoadAssetsProps } from "@types";
 
 const fontsPaths: Fonts = {
   Bold: require("../../assets/fonts/Oswald-Bold.ttf"),
