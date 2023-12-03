@@ -46,7 +46,7 @@ describe("RoundedButton component", () => {
       alignItems: "center",
       backgroundColor: "#FFFFFF",
       borderWidth: 6,
-      borderColor: "#86939e",
+      borderColor: "#000000",
     });
   });
 
@@ -69,14 +69,6 @@ describe("RoundedButton component", () => {
     expect(buttonElement).toBeOnTheScreen();
 
     expect(buttonElement.props.style).toEqual({
-      backgroundColor: "#FFFFFF",
-      borderRadius: 15,
-      height: 96,
-      width: 96,
-      justifyContent: "center",
-      alignItems: "center",
-      borderWidth: 6,
-      borderColor: "#86939e",
       borderCurve: "circular",
     });
   });

@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import { RectButton, RectButtonProperties } from "react-native-gesture-handler";
-import { languagePicker } from "./RoundedButton.styles";
 
 interface RoundedButtonProps {
   children: ReactNode;
@@ -12,13 +11,20 @@ interface RoundedButtonProps {
 export const RoundedButton = ({
   children,
   onPress,
-  style = { backgroundColor: "#FF0000" },
+  style = {
+    borderRadius: 15,
+    height: 96,
+    width: 96,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#FFFFFF",
+    borderWidth: 6,
+    borderColor: "#000000",
+  },
   testID = "rounded",
 }: RoundedButtonProps) => {
-  const picker = languagePicker();
-
   return (
-    <RectButton style={[style, picker.button]} {...{ onPress, testID }}>
+    <RectButton style={[style]} {...{ onPress, testID }}>
       {children}
     </RectButton>
   );
