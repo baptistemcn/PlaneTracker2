@@ -70,7 +70,7 @@ describe("ReImage component", () => {
     expect(imgElement).toBeTruthy();
     expect(imgElement).toBeOnTheScreen();
 
-    expect(imgElement.props.resizeMode).toEqual("center");
+    expect(imgElement.props.resizeMode).toEqual("contain");
   });
 
   it("should render an image with a defined resizeMode", () => {

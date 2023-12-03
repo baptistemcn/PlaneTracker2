@@ -4,7 +4,7 @@ import { DUMMYIMG } from "@assets";
 import { ReImageProps } from "@types";
 
 export const ReImage = ({
-  resizeMode = "center",
+  resizeMode = "contain",
   source = DUMMYIMG,
   styles = { height: 64, width: 64 },
   testID = "image",
