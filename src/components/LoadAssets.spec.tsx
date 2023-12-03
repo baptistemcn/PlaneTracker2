@@ -30,4 +30,19 @@ describe("LoadAssets component", () => {
     expect(getByTestId("element")).toBeOnTheScreen();
     expect(getByTestId("element")).toHaveTextContent(mockLoadAssets.children);
   });
+
+  it("should not render children when fonts are not loaded", () => {
+    jest.mock("expo-font", () => ({
+      useFonts: jest.fn(() => [false]),
+    }));
+
+    const { queryByTestId } = render(
+      <LoadAssets>
+        <Text>{mockLoadAssets.children}</Text>
+      </LoadAssets>,
+    );
+
+    expect(queryByTestId("element")).toBeNull();
+    expect(queryByTestId("element")).not.toBeOnTheScreen();
+  });
 });
