@@ -9,7 +9,8 @@
     "onboarding": {
       "message": {
         "welcome": "Bienvenue ! On est partis ? ✈️",
-        "start": "Cliquez pour commencer"
+        "start": "Cliquez pour commencer",
+        "language": "Choissez votre langue"
       }
     }
   }
