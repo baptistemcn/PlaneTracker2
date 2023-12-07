@@ -9,9 +9,11 @@
       "@components": ["src/components"],
       "@i18n": ["src/i18n"],
       "@routes": ["src/routes"],
+      "@styles": ["src/styles"],
       "@theme": ["src/theme"],
       "@types": ["src/types"],
-      "@ui": ["src/ui"]
+      "@ui": ["src/ui"],
+      "@utils": ["src/utils"]
     }
   }
 }
