@@ -1,0 +1,1 @@
+export { assertTextIsUppercase } from "./assertTextIsUppercase";
