@@ -4,6 +4,10 @@
     "common": {
       "button": {
         "start": "Commencer"
+      },
+      "theme": {
+        "dark": "sombre",
+        "light": "clair"
       }
     },
     "onboarding": {
@@ -12,6 +16,9 @@
         "start": "Cliquez pour commencer",
         "language": "Choissez votre langue"
       }
+    },
+    "theming": {
+      "title": "Thème"
     }
   }
 }

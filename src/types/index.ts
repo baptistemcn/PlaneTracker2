@@ -6,3 +6,4 @@ export { ReImageProps } from "./image.interface";
 export { Fonts, LoadAssetsProps } from "./loadassets.interface";
 export { RoundedButtonProps } from "./roundedbutton.interface";
 export { ReTextProps } from "./text.interface";
+export { ThemeProps } from "./themePicker.interface";
