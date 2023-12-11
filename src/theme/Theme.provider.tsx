@@ -9,6 +9,7 @@ interface ReThemeProviderProps {
 }
 
 const theme = createTheme({
+  mode: "light",
   darkColors: {
     background: palette.dark.background,
     white: palette.dark.white,
