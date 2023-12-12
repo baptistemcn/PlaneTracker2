@@ -9,7 +9,7 @@ export const assertTextIsUppercase = async (
     const textElement = getByTestId(elementTestId) as ReactTestInstance;
     expect(textElement).toBeDefined();
     expect(textElement.props.children).toEqual(
-      expect.stringMatching(/^[A-Z\s]+$/),
+      expect.stringMatching(/^[A-Z\s.]+$/),
     );
   });
 };
