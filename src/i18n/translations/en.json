@@ -3,7 +3,8 @@
     "name": "Plane Tracker",
     "common": {
       "button": {
-        "start": "Start"
+        "start": "Start",
+        "next": "Next"
       },
       "theme": {
         "dark": "dark",
@@ -18,7 +19,11 @@
       }
     },
     "theming": {
-      "title": "Theme"
+      "message": {
+        "title": "Theme",
+        "favorite": "A favorite theme?",
+        "start": "Theme selection"
+      }
     }
   }
 }
