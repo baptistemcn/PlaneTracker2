@@ -10,6 +10,7 @@ const AuthenticationStack = createStackNavigator<AuthRoutes>();
 export const AuthenticationNavigator = () => {
   return (
     <AuthenticationStack.Navigator
+      initialRouteName="Onboarding"
       screenOptions={{ headerTitle: undefined, headerShadowVisible: false }}
     >
       <AuthenticationStack.Screen
@@ -20,7 +21,7 @@ export const AuthenticationNavigator = () => {
       <AuthenticationStack.Screen
         name="Themeing"
         component={Themeing}
-        options={{ title: "", headerShown: false }}
+        options={{ title: "" }}
       />
     </AuthenticationStack.Navigator>
   );
