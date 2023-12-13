@@ -1,10 +1,11 @@
 import { RectButton } from "react-native-gesture-handler";
-import { FontAwesome5 as Icon } from "@expo/vector-icons";
+
 import { useTheme } from "@rneui/themed";
 
 import { IconButtonProps } from "@types";
 
 import { Box } from "../Box";
+import { ReIcon } from "../Icon";
 import { ReText } from "../Text";
 
 import { useStyles } from "./IconButton.style";
@@ -30,7 +31,7 @@ export const IconButton = ({
       {...{ onPress, testID }}
     >
       <Box {...{ backgroundColor }} testID="icon">
-        <Icon {...{ color, name, size }} />
+        <ReIcon {...{ color, name, size }} />
       </Box>
       <Box {...{ backgroundColor, margin }}>
         <ReText {...{ color }} testID="label">
