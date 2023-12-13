@@ -2,7 +2,7 @@ import { render } from "@testing-library/react-native";
 
 import { ReThemeProvider } from "@theme";
 
-import { Themeing } from "./Theming";
+import { Theming } from "./Theming";
 import { assertTextIsUppercase } from "@utils";
 
 jest.mock("react-i18next", () => ({
@@ -18,7 +18,7 @@ describe("Theming screen", () => {
   it("should render", () => {
     render(
       <ReThemeProvider>
-        <Themeing />
+        <Theming />
       </ReThemeProvider>,
     );
   });
@@ -26,7 +26,7 @@ describe("Theming screen", () => {
   it("should render a title", () => {
     const { getByTestId } = render(
       <ReThemeProvider>
-        <Themeing />
+        <Theming />
       </ReThemeProvider>,
     );
 
@@ -41,7 +41,7 @@ describe("Theming screen", () => {
   it("should render a title in uppercase", async () => {
     const { getByTestId } = render(
       <ReThemeProvider>
-        <Themeing />
+        <Theming />
       </ReThemeProvider>,
     );
 
@@ -56,7 +56,7 @@ describe("Theming screen", () => {
   it("should render a presentation text", () => {
     const { getByTestId } = render(
       <ReThemeProvider>
-        <Themeing />
+        <Theming />
       </ReThemeProvider>,
     );
 
@@ -71,7 +71,7 @@ describe("Theming screen", () => {
   it("should render two theme button", () => {
     const { getByTestId } = render(
       <ReThemeProvider>
-        <Themeing />
+        <Theming />
       </ReThemeProvider>,
     );
 
@@ -84,7 +84,7 @@ describe("Theming screen", () => {
   it("should render a helping message", () => {
     const { getByTestId } = render(
       <ReThemeProvider>
-        <Themeing />
+        <Theming />
       </ReThemeProvider>,
     );
 
@@ -99,7 +99,7 @@ describe("Theming screen", () => {
   it("should render a button to continue", () => {
     const { getByTestId } = render(
       <ReThemeProvider>
-        <Themeing />
+        <Theming />
       </ReThemeProvider>,
     );
 

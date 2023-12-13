@@ -3,7 +3,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import { AuthRoutes } from "@routes";
 
 import { Onboarding } from "./Onboarding";
-import { Themeing } from "./Theming";
+import { Theming } from "./Theming";
 
 const AuthenticationStack = createStackNavigator<AuthRoutes>();
 
@@ -19,8 +19,8 @@ export const AuthenticationNavigator = () => {
         options={{ title: "", headerShown: false }}
       />
       <AuthenticationStack.Screen
-        name="Themeing"
-        component={Themeing}
+        name="Theming"
+        component={Theming}
         options={{ title: "" }}
       />
     </AuthenticationStack.Navigator>

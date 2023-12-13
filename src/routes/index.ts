@@ -17,5 +17,5 @@ export type AppRoutes = {
 
 export type AuthRoutes = {
   Onboarding: undefined;
-  Themeing: undefined;
+  Theming: undefined;
 };

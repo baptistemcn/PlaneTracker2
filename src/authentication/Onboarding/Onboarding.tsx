@@ -48,7 +48,7 @@ export const Onboarding = ({
         <Box margin={theme.spacing.md}>
           <ReButton
             label={t("common.button.start").toUpperCase()}
-            onPress={() => navigation.navigate("Themeing")}
+            onPress={() => navigation.navigate("Theming")}
           />
         </Box>
       </Box>

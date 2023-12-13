@@ -7,7 +7,7 @@ import { Box, ReButton, ReText } from "@ui";
 
 import { ThemePicker } from "../components";
 
-export const Themeing = () => {
+export const Theming = () => {
   const { theme } = useTheme();
   const { t } = useTranslation();
 

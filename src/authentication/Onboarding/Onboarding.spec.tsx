@@ -126,6 +126,6 @@ describe("Onboarding Screen", () => {
 
     fireEvent.press(btnElement);
 
-    expect(navigationMock.navigate).toHaveBeenCalledWith("Themeing");
+    expect(navigationMock.navigate).toHaveBeenCalledWith("Theming");
   });
 });
