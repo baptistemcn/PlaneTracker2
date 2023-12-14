@@ -30,7 +30,7 @@ export const IconButton = ({
       style={[styles.container, { ...{ backgroundColor } }]}
       {...{ onPress, testID }}
     >
-      <Box {...{ backgroundColor }} testID="icon">
+      <Box {...{ backgroundColor }} testID="icon-container">
         <ReIcon {...{ color, name, size }} />
       </Box>
       <Box {...{ backgroundColor, margin }}>

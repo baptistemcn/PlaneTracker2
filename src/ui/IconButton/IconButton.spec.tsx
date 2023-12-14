@@ -27,7 +27,7 @@ describe("IconButton component", () => {
     expect(button).toBeOnTheScreen();
   });
 
-  it("should render a button with default style", () => {
+  it("should render a button with style", () => {
     const { getByTestId } = render(
       <ReThemeProvider>
         <IconButton />
@@ -51,14 +51,14 @@ describe("IconButton component", () => {
     });
   });
 
-  it("should render a sun icon in the button", () => {
+  it("should render a default icon in a button", () => {
     const { getByTestId } = render(
       <ReThemeProvider>
         <IconButton />
       </ReThemeProvider>,
     );
 
-    const icon = getByTestId("icon");
+    const icon = getByTestId("icon-container");
 
     expect(icon.props.children).toBeTruthy();
     expect(icon.props.children).toBeDefined();
@@ -73,7 +73,7 @@ describe("IconButton component", () => {
       </ReThemeProvider>,
     );
 
-    const icon = getByTestId("icon");
+    const icon = getByTestId("icon-container");
 
     expect(icon.props.children).toBeTruthy();
     expect(icon.props.children).toBeDefined();
