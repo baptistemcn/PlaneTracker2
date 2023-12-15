@@ -54,10 +54,8 @@ export const Box = ({
     width: width,
   },
   testID = "box",
-}: ReBoxProps) => {
-  return (
-    <StyledView className={nativewind} style={styles} {...{ testID }}>
-      {children}
-    </StyledView>
-  );
-};
+}: ReBoxProps) => (
+  <StyledView className={nativewind} style={styles} {...{ testID }}>
+    {children}
+  </StyledView>
+);
