@@ -9,6 +9,8 @@ export const ThemePicker = () => {
   const { setMode } = useThemeMode();
   const { t } = useTranslation();
 
+  const backgroundColor = theme.colors.background;
+
   return (
     <>
       {THEME.map((item, index) => (
@@ -16,6 +18,7 @@ export const ThemePicker = () => {
           key={index}
           margin={theme.spacing.lg}
           testID={"themepicker" + index}
+          {...{ backgroundColor }}
         >
           <IconButton
             name={item.name}

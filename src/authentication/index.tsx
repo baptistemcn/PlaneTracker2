@@ -4,14 +4,23 @@ import { AuthRoutes } from "@routes";
 
 import { Onboarding } from "./Onboarding";
 import { Theming } from "./Theming";
+import { useTheme } from "@rneui/themed";
 
 const AuthenticationStack = createStackNavigator<AuthRoutes>();
 
 export const AuthenticationNavigator = () => {
+  const { theme } = useTheme();
+
+  const backgroundColor = theme.colors.background;
+
   return (
     <AuthenticationStack.Navigator
       initialRouteName="Onboarding"
-      screenOptions={{ headerTitle: undefined, headerShadowVisible: false }}
+      screenOptions={{
+        headerTitle: undefined,
+        headerShadowVisible: false,
+        headerStyle: { ...{ backgroundColor } },
+      }}
     >
       <AuthenticationStack.Screen
         name="Onboarding"

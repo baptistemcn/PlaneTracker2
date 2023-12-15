@@ -16,16 +16,24 @@ export const LanguagePicker = () => {
 
   const [displayLanguage, setDisplayLanguage] = useState<string>(i18n.language);
 
+  const backgroundColor = theme.colors.background;
+  const color = theme.colors.white;
+
   const handleLanguageSelection = (language: string) => {
     i18n.changeLanguage(language);
     setDisplayLanguage(language);
   };
 
   return (
-    <Box flex={1} flexDirection={"column"}>
-      <Box flex={1} flexDirection={"row"} testID="button-box">
+    <Box flex={1} flexDirection={"column"} {...{ backgroundColor }}>
+      <Box
+        flex={1}
+        flexDirection={"row"}
+        testID="button-box"
+        {...{ backgroundColor }}
+      >
         {LANGUAGE.map((lang, index) => (
-          <Box {...{ margin }} key={index}>
+          <Box {...{ backgroundColor, margin }} key={index}>
             <RoundedButton
               style={[
                 langPicker.button,
@@ -41,7 +49,7 @@ export const LanguagePicker = () => {
           </Box>
         ))}
       </Box>
-      <ReText>{t("onboarding.message.language")}</ReText>
+      <ReText {...{ color }}>{t("onboarding.message.language")}</ReText>
     </Box>
   );
 };

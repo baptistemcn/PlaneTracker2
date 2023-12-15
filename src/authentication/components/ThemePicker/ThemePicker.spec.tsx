@@ -50,7 +50,7 @@ describe("ThemePicker component", () => {
     expect(element).toBeTruthy();
     expect(element).toBeOnTheScreen();
 
-    expect(element.props.style.backgroundColor).toEqual("#000000");
+    expect(element.props.style.backgroundColor).toEqual("#333533");
 
     fireEvent.press(element);
 
