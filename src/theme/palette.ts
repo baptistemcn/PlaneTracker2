@@ -6,7 +6,7 @@ export const basic = {
 
 export const primary = {
   background: "#FFFFFF",
-  white: "#000000",
+  white: "#333533",
   primary: "#F5CB5C",
   secondary: "#20A39E",
   error: "#EF5B5B",
@@ -14,6 +14,6 @@ export const primary = {
 };
 
 export const dark = {
-  background: "#000000",
+  background: "#333533",
   white: "#FFFFFF",
 };

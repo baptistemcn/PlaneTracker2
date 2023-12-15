@@ -27,7 +27,7 @@ describe("IconButton component", () => {
     expect(button).toBeOnTheScreen();
   });
 
-  it("should render a button with style", () => {
+  it("should render a button with styles", () => {
     const { getByTestId } = render(
       <ReThemeProvider>
         <IconButton />
@@ -46,7 +46,7 @@ describe("IconButton component", () => {
       flexDirection: "row",
       justifyContent: "center",
       alignItems: "center",
-      backgroundColor: "#000000",
+      backgroundColor: "#333533",
     });
   });
 
