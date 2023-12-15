@@ -4,7 +4,11 @@ import { LoadAssets } from "@components";
 import { ReI18nProvider } from "@i18n";
 import { ReThemeProvider } from "@theme";
 
-import { PlaneTracker } from "./App";
+import React, { Suspense, lazy } from "react";
+
+const PlaneTracker = lazy(() =>
+  import("./App").then((module) => ({ default: module.PlaneTracker })),
+);
 
 export const Entry = () => {
   return (
@@ -12,7 +16,9 @@ export const Entry = () => {
       <ReThemeProvider>
         <LoadAssets>
           <ReI18nProvider>
-            <PlaneTracker />
+            <Suspense>
+              <PlaneTracker />
+            </Suspense>
           </ReI18nProvider>
         </LoadAssets>
       </ReThemeProvider>
