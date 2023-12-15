@@ -46,7 +46,6 @@ describe("IconButton component", () => {
       flexDirection: "row",
       justifyContent: "center",
       alignItems: "center",
-      borderWidth: 3,
       backgroundColor: "#000000",
     });
   });

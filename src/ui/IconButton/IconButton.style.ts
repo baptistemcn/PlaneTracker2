@@ -8,6 +8,5 @@ export const useStyles = makeStyles(() => ({
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
-    borderWidth: 3,
   },
 }));
