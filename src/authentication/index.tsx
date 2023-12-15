@@ -5,6 +5,7 @@ import { AuthRoutes } from "@routes";
 import { Onboarding } from "./Onboarding";
 import { Theming } from "./Theming";
 import { useTheme } from "@rneui/themed";
+import { SignUp } from "./SignUp";
 
 const AuthenticationStack = createStackNavigator<AuthRoutes>();
 
@@ -30,6 +31,11 @@ export const AuthenticationNavigator = () => {
       <AuthenticationStack.Screen
         name="Theming"
         component={Theming}
+        options={{ title: "" }}
+      />
+      <AuthenticationStack.Screen
+        name="SignUp"
+        component={SignUp}
         options={{ title: "" }}
       />
     </AuthenticationStack.Navigator>

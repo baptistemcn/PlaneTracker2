@@ -6,8 +6,9 @@ import { useTheme } from "@rneui/themed";
 import { Box, ReButton, ReText } from "@ui";
 
 import { ThemePicker } from "../components";
+import { AuthNavigationProps } from "@routes";
 
-export const Theming = () => {
+export const Theming = ({ navigation }: AuthNavigationProps<"Theming">) => {
   const { theme } = useTheme();
   const { t } = useTranslation();
 
@@ -72,7 +73,10 @@ export const Theming = () => {
         </Box>
       </Box>
       <Box flex={1} {...{ backgroundColor }}>
-        <ReButton label={t("common.button.next").toUpperCase()} />
+        <ReButton
+          label={t("common.button.next").toUpperCase()}
+          onPress={() => navigation.navigate("SignUp")}
+        />
       </Box>
     </Box>
   );

@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react-native";
+import { fireEvent, render } from "@testing-library/react-native";
 
 import { ReThemeProvider } from "@theme";
 
@@ -107,5 +107,28 @@ describe("Theming screen", () => {
 
     expect(button).toBeTruthy();
     expect(button).toBeOnTheScreen();
+  });
+
+  it("should change to next screen when click on validation button", () => {
+    const navigationMock = {
+      navigate: jest.fn(),
+    };
+
+    const { getByTestId } = render(
+      <ReThemeProvider>
+        <Theming navigation={navigationMock} />
+      </ReThemeProvider>,
+    );
+
+    const btnElement = getByTestId("button");
+
+    expect(btnElement).toBeTruthy();
+    expect(btnElement).toBeOnTheScreen();
+
+    fireEvent.press(btnElement);
+
+    expect(navigationMock.navigate).toHaveBeenCalled();
+    expect(navigationMock.navigate).toHaveBeenCalledTimes(1);
+    expect(navigationMock.navigate).toHaveBeenCalledWith("SignUp");
   });
 });
