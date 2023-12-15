@@ -34,8 +34,8 @@ describe("ThemePicker component", () => {
     expect(button).toBeTruthy();
     expect(button).toBeOnTheScreen();
 
-    expect(button.props.children.props.name).toEqual("moon");
-    expect(button.props.children.props.label).toEqual("common.theme.dark");
+    expect(button.props.children.props.name).toEqual("sun");
+    expect(button.props.children.props.label).toEqual("common.theme.light");
   });
 
   it("should render a different button when click", () => {
@@ -45,7 +45,7 @@ describe("ThemePicker component", () => {
       </ReThemeProvider>,
     );
 
-    const element = getByTestId("picker0");
+    const element = getByTestId("picker1");
 
     expect(element).toBeTruthy();
     expect(element).toBeOnTheScreen();
