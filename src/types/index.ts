@@ -6,5 +6,6 @@ export { IconButtonProps } from "./iconButton.interface";
 export { ReImageProps } from "./image.interface";
 export { Fonts, LoadAssetsProps } from "./loadassets.interface";
 export { RoundedButtonProps } from "./roundedbutton.interface";
+export { SpinnerProps } from "./spinner.interface";
 export { ReTextProps } from "./text.interface";
 export { ThemeProps } from "./themePicker.interface";
