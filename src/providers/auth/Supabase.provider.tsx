@@ -1,9 +1,7 @@
 /* eslint-disable no-console */
-import "react-native-url-polyfill/auto";
-import { Session, Subscription, createClient } from "@supabase/supabase-js";
+import { Session, Subscription } from "@supabase/supabase-js";
 import { ReactNode, createContext, useEffect, useState } from "react";
-import AsyncStorage from "@react-native-async-storage/async-storage";
-import { SUPABASE } from "@constants";
+import { supabase } from "./supabase.client";
 
 interface SupbaseProviderProps {
   children: ReactNode;
@@ -13,15 +11,6 @@ type ContextProps = {
   user: null | boolean;
   session: Session | null;
 };
-
-const supabase = createClient(SUPABASE.PROJECT_ID!, SUPABASE.API_KEY!, {
-  auth: {
-    storage: AsyncStorage,
-    autoRefreshToken: true,
-    persistSession: true,
-    detectSessionInUrl: true,
-  },
-});
 
 const AuthContext = createContext<Partial<ContextProps>>({});
 
