@@ -13,6 +13,7 @@
       "@i18n": ["src/i18n"],
       "@providers": ["src/providers"],
       "@routes": ["src/routes"],
+      "@services": ["src/services"],
       "@styles": ["src/styles"],
       "@theme": ["src/theme"],
       "@types": ["src/types"],

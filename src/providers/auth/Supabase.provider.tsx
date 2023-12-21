@@ -1,6 +1,8 @@
-/* eslint-disable no-console */
-import { Session, Subscription } from "@supabase/supabase-js";
 import { ReactNode, createContext, useEffect, useState } from "react";
+import { Session, Subscription } from "@supabase/supabase-js";
+
+import { Logger } from "@services";
+
 import { supabase } from "./supabase.client";
 
 interface SupbaseProviderProps {
@@ -13,6 +15,8 @@ type ContextProps = {
 };
 
 const AuthContext = createContext<Partial<ContextProps>>({});
+
+const logger = new Logger();
 
 const SupabaseProvider = ({ children }: SupbaseProviderProps) => {
   const [user, setUser] = useState<null | boolean>(null);
@@ -27,7 +31,7 @@ const SupabaseProvider = ({ children }: SupbaseProviderProps) => {
       setUser(session ? true : false);
       const { data: listener } = supabase.auth.onAuthStateChange(
         async (event, session) => {
-          console.log(`Supabase auth event: ${event}`);
+          logger.DEBUG(`Supabase auth event: ${event}`);
           setSession(session);
           setUser(session ? true : false);
         },
