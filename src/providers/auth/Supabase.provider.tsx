@@ -3,7 +3,7 @@ import { Session, Subscription } from "@supabase/supabase-js";
 
 import { Logger } from "@services";
 
-import { supabase } from "./supabase.client";
+import { supabase } from "@database";
 
 interface SupbaseProviderProps {
   children: ReactNode;
