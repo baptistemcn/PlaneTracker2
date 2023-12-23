@@ -1,5 +1,10 @@
-import { ReText } from "@ui";
+import { Box, ReText, ReTextInput } from "@ui";
 
 export const SignUp = () => {
-  return <ReText>SignUp</ReText>;
+  return (
+    <Box flex={1}>
+      <ReText>SignUp</ReText>
+      <ReTextInput />
+    </Box>
+  );
 };

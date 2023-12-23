@@ -9,4 +9,5 @@ export { Fonts, LoadAssetsProps } from "./loadassets.interface";
 export { RoundedButtonProps } from "./roundedbutton.interface";
 export { SpinnerProps } from "./spinner.interface";
 export { ReTextProps } from "./text.interface";
+export { CustomTextInputProps } from "./textInput.interface";
 export { ThemeProps } from "./themePicker.interface";

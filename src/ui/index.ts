@@ -8,3 +8,4 @@ export { ReImage } from "./Image";
 export { RoundedButton } from "./RoundedButton";
 export { Spinner } from "./Spinner";
 export { ReText } from "./Text";
+export { ReTextInput } from "./TextInput";
