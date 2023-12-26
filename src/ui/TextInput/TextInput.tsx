@@ -12,14 +12,14 @@ export const CustomTextInput: ForwardRefRenderFunction<
   CustomTextInputProps
 > = (
   {
-    autoCapitalize,
+    autoCapitalize = "none",
     autoComplete,
     error,
     keyboardType = "default",
     onBlur,
     onChangeText,
     placeholder = "Text",
-    secureTextEntry,
+    secureTextEntry = false,
     testID = "input",
     value,
   },
@@ -50,7 +50,7 @@ export const CustomTextInput: ForwardRefRenderFunction<
           value,
         }}
       />
-      {error && <ReText>{error}</ReText>}
+      {error && <ReText testID="error">{error}</ReText>}
     </Box>
   );
 };
